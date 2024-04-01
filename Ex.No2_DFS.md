@@ -1,4 +1,4 @@
-![dfs](https://github.com/elakiet/AI_Lab_2023-24/assets/133135881/c1bf3db7-dcbe-4607-8bc1-6d92de1408f1)# Ex.No: 2  Implementation of Depth First Search
+# Ex.No: 2  Implementation of Depth First Search
 ### DATE:  20/02/2024                                                                       
 ### REGISTER NUMBER :  212221040047
 ### AIM: 
