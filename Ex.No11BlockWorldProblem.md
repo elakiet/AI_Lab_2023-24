@@ -103,6 +103,8 @@ Step 10 : Obtain the plan for given problem.<br>
 
 ![ex11_1](https://github.com/elakiet/AI_Lab_2023-24/assets/133135881/0e34bdb4-a7fe-40f2-8f19-2f20275febf4)
 
+
+
 ![ex11_2](https://github.com/elakiet/AI_Lab_2023-24/assets/133135881/3a690364-b7ae-4684-b808-06a58016d712)
 
 
