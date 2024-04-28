@@ -24,15 +24,22 @@ Step 10 : Obtain the plan for given problem.<br>
   
   (:predicates (clear ?x)
   
-           (on-table ?x)
+           (on-table ?x) 
+           
            (arm-empty)
+           
            (holding ?x)
+           
            (on ?x ?y))
            
   (:action pickup
+  
       :parameters (?ob)
+      
       :precondition (and (clear ?ob) (on-table ?ob) (arm-empty))
+      
       :effect (and (holding ?ob) (not (clear ?ob)) (not (on-table ?ob))
+      
            (not (arm-empty))))
            
   (:action putdown
@@ -43,14 +50,20 @@ Step 10 : Obtain the plan for given problem.<br>
            
   (:action stack
       :parameters (?ob ?underob)
+      
       :precondition (and (clear ?underob) (holding ?ob))
+      
       :effect (and (arm-empty) (clear ?ob) (on ?ob ?underob)
+      
             (not (clear ?underob)) (not (holding ?ob))))
             
   (:action unstack
       :parameters (?ob ?underob)
+      
       :precondition (and (on ?ob ?underob) (clear ?ob) (arm-empty))
+      
       :effect (and (holding ?ob) (clear ?underob)
+      
            (not (on ?ob ?underob)) (not (clear ?ob)) (not (arm-empty)))))
 
 
@@ -62,18 +75,28 @@ Step 10 : Obtain the plan for given problem.<br>
 
 
 ### Input 
-Problem 1: Problem.pddl
+#Problem 1: Problem.pddl
  (define (problem pb1)
+ 
       (:domain blocksworld)
+      
       (:objects a b)
+      
       (:init (on-table a) (on-table b) (clear a) (clear b) (arm-empty))
+      
       (:goal (and (on a b))))
-Problem 2: Problem2.pddl
+      
+#Problem 2: Problem2.pddl
  (define(problem pb3)
+ 
       (:domain blocksworld)
+
       (:objects a b c)
+      
       (:init (on-table a) (on-table b) (on-table c)
+      
            (clear a) (clear b) (clear c) (arm-empty))
+           
       (:goal (and (on a b) (on b c))))
 
 ### Output/Plan:
